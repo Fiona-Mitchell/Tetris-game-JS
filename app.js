@@ -58,6 +58,22 @@ function draw() {
   })
 }
 
-draw()
+function undraw() {
+  current.forEach(index => {
+    squares[currentPosition + index].classList.remove('tetrimino')
+  })
+}
+
+
+//make the tetrimino move down every second
+timerId = setInterval(moveDown, 1000)
+
+
+//move move down function
+function moveDown() {
+  undraw()
+  currentPosition += width
+  draw()
+}
 
 })
