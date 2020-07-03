@@ -41,7 +41,37 @@ document.addEventListener('DOMContentLoaded', () => {
     [width, width+1, width+2, width+3]
   ]
 
-  const theTetriminoes = [lTetrimono, zTetrimino, tTerimino ,oTetrimino, iTetrimino]
+  const theTetriminoes = [lTetrimono, zTetrimino, tTerimino, oTetrimino, iTetrimino]
+
+//start position and starting angle
+  let currentPosition = 4
+  let currentRotation = 0
+
+
+//make a tetrimino be chosen randomly
+let random = Math.floor(Math.random()*theTetriminoes.length)
+
+//draw the first tetrimino
+
+function draw() {
+  current.forEach(index => {
+    squares[currentPosition + index].classList.add('tetrimino')
+  })
+}
+
+//undraw the tetrimino
+function undraw(){
+  current.forEach(index => {
+    squares[currentPosition + index].classList.remove('tetrimino')
+  })
+}
+
+
+//
+
+
+
+
 
 
 
