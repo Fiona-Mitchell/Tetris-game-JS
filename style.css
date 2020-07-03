@@ -3,6 +3,7 @@
   height: 400px;
   display: flex;
   flex-wrap: wrap;
+  background-color: green;
 }
 
 .grid div{
