@@ -1,5 +1,38 @@
+html{
+  font-family: MuseoModerno, cursive;
+  text-align: center;
+  background-color: #82b2ff;
+  transition: all 0.5s;
+}
+
+h1{
+  padding-top: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+h3{
+  font-weight: 300;
+  font-size: 15px;
+}
+
+
+button{
+  font-family: MuseoModerno, cursive;
+  font-size: 15px;
+  color: pink;
+  background-color: #82b2ff;
+  border: 3px solid pink;
+  padding: 20px 30px;
+  transition: all 0.5s;
+  position: relative;
+}
+
 .container{
   display: flex;
+  margin: 30px auto;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .grid{
@@ -7,16 +40,18 @@
   height: 400px;
   display: flex;
   flex-wrap: wrap;
-  background-color: green;
+  background-color: #009e8c;
+  border-radius: 5px;
 }
 
 .grid div{
   height: 20px;
   width: 20px;
+  border-radius: 5px;
 }
 
 .tetrimino {
-  background-color: yellow;
+  border-radius: 3px;
 }
 
 
@@ -25,8 +60,9 @@
   height: 80px;
   display: flex;
   flex-wrap: wrap;
-  background-color: aqua;
+  background-color: #9effff;
   margin-left: 50px;
+  border-radius: 10px;
 }
 
 .mini-grid div{
