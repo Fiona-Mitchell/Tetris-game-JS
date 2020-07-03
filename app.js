@@ -45,9 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //start position and starting angle
   let currentPosition = 4
-  let current = theTetriminoes[0][0]
+  let currentRotation = 0
 
+//choose a random tetrimino
+  let random = Math.floor(Math.random()*theTetriminoes.length)
+  let current = theTetriminoes[random][0]
 
+//draw the first rotation of first tetrimino
 function draw() {
   current.forEach(index => {
     squares[currentPosition + index].classList.add('tetrimino')
