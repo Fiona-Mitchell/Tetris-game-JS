@@ -68,6 +68,13 @@ function undraw() {
 //make the tetrimino move down every second
 timerId = setInterval(moveDown, 1000)
 
+//assign movements to keyboard/keycodes
+function control(e) {
+    if(e.keyCode === 37) {
+      moveLeft()
+  }
+}
+document.addEventListener('keyup', control)
 
 //move move down function
 function moveDown() {
@@ -87,6 +94,20 @@ function freeze() {
     currentPosition = 4
     draw()
   }
+}
+
+
+//move tetrimino left, unless it hits the edge
+function moveLeft() {
+  undraw()
+  const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
+
+  if(!isAtLeftEdge) currentPosition -=1
+
+  if(current.some(index => squares[currentPosition + index].classList.contains('taken'))){
+    currentPosition +=1
+  }
+  draw()
 }
 
 })
